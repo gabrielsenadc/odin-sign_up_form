@@ -1,0 +1,72 @@
+:root{
+    --logo-area-size: 100px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+
+.logo {
+    background-image: url("assets/planta.png");
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+
+    color: white;
+
+    flex: 0.5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: var(--logo-area-size);
+    width: auto;
+}
+
+.logo .text {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: calc(var(--logo-area-size) / 2);
+
+    margin-top: 20vh;
+
+}
+
+.logo p {
+    font-size: 10px;
+    text-align: center;
+    
+}
+
+.login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+}
+
+.login .text {
+    flex: 1;
+    padding-left: 30px;
+    padding-right: 70px; 
+    font-size: 20px;
+}
+
+.login .text p {
+    margin-top: 95px;
+}
+
+.login .form {
+    flex: 2;
+    background-color: white;
+}   
