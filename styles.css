@@ -1,6 +1,12 @@
 :root{
     --logo-area-size: 100px;
+    --padding-left-text: 30px;
 }
+
+@font-face {
+    font-family: logoFont;
+    src: url("assets/Norse-Bold.otf");
+  }
 
 body {
     margin: 0;
@@ -36,28 +42,28 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-size: calc(var(--logo-area-size) / 2);
+    font-size: calc(var(--logo-area-size) * calc(3 / 4));
 
     margin-top: 20vh;
+
+    font-family: logoFont;
 
 }
 
 .logo p {
     font-size: 10px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .login {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 .login .text {
-    flex: 1;
-    padding-left: 30px;
+    padding-left: var(--padding-left-text);
     padding-right: 70px; 
     font-size: 20px;
 }
@@ -66,7 +72,65 @@ body {
     margin-top: 95px;
 }
 
-.login .form {
-    flex: 2;
+
+input, label {
+    display:block;
+}
+
+input {
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:focus {
+    outline: 2px solid blue;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.form .main {
+    padding-left: var(--padding-left-text);
+    padding-top: 10px;
+    padding-bottom: 30px;
     background-color: white;
-}   
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 2px 2px 5px grey;
+}
+
+.form-text {
+    font-size: 20px;
+}
+
+.section {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px; 
+}
+
+.button {
+    margin-top: 30px;
+    padding-left: var(--padding-left-text);
+}
+
+button {
+    background-color:#596D48;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+.log-text {
+    padding-left: var(--padding-left-text);
+    font-size: 15px;
+}
+
+.log-text span {
+    color: blue;
+}
